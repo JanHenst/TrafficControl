@@ -1,2 +1,1 @@
-public class TrafficController {
-}
+// Geen idee wat hier moet :)

@@ -3,6 +3,7 @@ public class TrafficLight {
     private int id;
     private int AllLights;
     private int StartingColor;
+    private String CurrentLight;
 
     // een constructor die zonder variablen opstuurd
     public TrafficLight() {
@@ -11,7 +12,7 @@ public class TrafficLight {
         StartingColor = 1;
     }
 
-    // een constructor die variablen opsturen
+    // een constructor die variablen opstuurt
     public TrafficLight(int id, int AllLights) {
         this.id = id;
         this.AllLights = AllLights;
@@ -77,5 +78,33 @@ public class TrafficLight {
 
     public void setAllLights(int allLights) {
         this.AllLights = allLights;
+    }
+
+    public String changeColor(int light) {
+        id = 1;
+        String result;
+        switch (light) {
+            case 1:
+                System.out.println("Red");
+                result = "Red";
+                id++;
+                break;
+            case 2:
+                System.out.println("Orange");
+                result = "Orange";
+                id++;
+                break;
+            case 3:
+                System.out.println("Green");
+                result = "Green";
+                id++;
+                break;
+            default:
+                System.out.println("Red");
+                result = "red";
+                id = 0;
+                break;
+        }
+        return result;
     }
 }
